@@ -24,7 +24,7 @@ export function RecommandText({
 
       border: 'none',
       padding: '3px 4px',
-      fontSize: '14px',
+      fontSize: '12px',
       borderRadius: '3px',
       cursor: 'pointer',
     },

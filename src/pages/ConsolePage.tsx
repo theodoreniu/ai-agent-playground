@@ -63,7 +63,8 @@ export function ConsolePage() {
       fontWeight: '500',
     },
     logo: {
-      height: '40px',
+      height: '30px',
+      borderRadius: '5px',
     },
   };
 

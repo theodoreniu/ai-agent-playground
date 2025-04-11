@@ -1,1 +1,10 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1729999017515" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6997" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M493.0048 492.9536H128.0512V128H493.056v364.9536z" fill="#F1511B" p-id="6998"></path><path d="M895.9488 492.9536H530.944V128H896v364.9536z" fill="#80CC28" p-id="6999"></path><path d="M493.0048 896H128v-364.9024H493.056V896z" fill="#00ADEF" p-id="7000"></path><path d="M895.8976 896h-364.9024v-364.9024h364.9024V896z" fill="#FBBC09" p-id="7001"></path></svg>
+<svg width="768" height="768" xmlns="http://www.w3.org/2000/svg" p-id="3942" version="1.1" class="icon" t="1744331672174">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" p-id="3943" fill="#F1511B" d="m364.9024,364.9024l-364.9024,0l0,-364.9024l364.9024,0l0,364.9024z"/>
+  <path id="svg_2" p-id="3944" fill="#80CC28" d="m767.8464,364.9024l-364.9024,0l0,-364.9024l364.9536,0l0,364.9024l-0.0512,0z"/>
+  <path id="svg_3" p-id="3945" fill="#00ADEF" d="m364.9024,768l-364.9024,0l0,-364.9024l364.9024,0l0,364.9024z"/>
+  <path id="svg_4" p-id="3946" fill="#FBBC09" d="m767.8464,768l-364.9024,0l0,-364.9024l364.9536,0l0,364.9024l-0.0512,0z"/>
+ </g>
+</svg>

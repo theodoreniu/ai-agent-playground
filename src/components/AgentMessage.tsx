@@ -72,6 +72,19 @@ const styles = {
 };
 
 const AgentUserMessage = ({ msg }: AgentMessageProps) => {
+  if (msg?.content?.type === 'function_call_output') {
+    return (
+      <div className={'conversation-item user'}>
+        <div className={`speaker user`}></div>
+        <div className={`speaker-content user`}>
+          <div style={styles.message_type}>AgentUserToolMessage</div>
+          <div>{msg?.content?.output} </div>
+          <ClickToJson msg={msg} />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={'conversation-item user'}>
       <div className={`speaker user`}></div>
@@ -260,6 +273,33 @@ const AgentAssistantMessage = ({ msg, sendMessage }: AgentMessageProps) => {
         <AgentAssistantProgressMessage msg={msg} sendMessage={sendMessage} />
       );
     }
+    return null;
+  }
+
+  if (msg?.content?.type === 'function_call') {
+    if (msg?.content?.name.startsWith('transfer_to_')) {
+      return (
+        <div className={'conversation-item assistant'}>
+          <div className={`speaker assistant`}></div>
+          <div className={`speaker-content assistant`}>
+            <div style={styles.message_type}>Handoff</div>
+            <div>call {msg?.content?.name}</div>
+            <ClickToJson msg={msg} />
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className={'conversation-item assistant'}>
+        <div className={`speaker assistant`}></div>
+        <div className={`speaker-content assistant`}>
+          <div style={styles.message_type}>AgentAssistantMessage</div>
+          <div>call {msg?.content?.name}</div>
+          <ClickToJson msg={msg} />
+        </div>
+      </div>
+    );
   }
 
   return (
