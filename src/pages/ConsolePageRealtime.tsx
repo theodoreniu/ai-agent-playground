@@ -328,7 +328,7 @@ export function ConsolePageRealtime() {
     try {
       await realtimeClientRef.current.connect();
 
-      const sse = new EventSource(profile.getAgentSseUrl('sessionId'));
+      const sse = new EventSource(profile.getAgentSseUrl());
       sse.onmessage = (event) => {
         console.log(event.data);
       };

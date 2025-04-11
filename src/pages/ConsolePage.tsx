@@ -50,7 +50,7 @@ export function ConsolePage() {
 
   const styles = {
     assistantType: {
-      fontSize: '10px',
+      fontSize: '12px',
       color: 'white',
       backgroundColor: 'green',
       borderRadius: '5px',

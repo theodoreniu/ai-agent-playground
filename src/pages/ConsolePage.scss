@@ -17,6 +17,8 @@
     flex-grow: 1;
   }
 
+
+
   .content-top {
     display: flex;
     align-items: center;
@@ -707,35 +709,7 @@ body.night-mode {
     background-color: #181818;
   }
   
-  .conversation-item  {
-    .speaker-content {
 
-      &:hover {
-        background-color: #090909 !important;
-      }
-
-      &.user {
-        background-color: #386306;
-        color: #ffffff;
-      }
-  
-      &.user::after {
-        border-left: 8px solid #386306;
-        color: #ffffff;
-      }
-  
-      &.assistant {
-        background-color: #090909;
-        color: #ffffff;
-      }
-  
-      &.assistant::before {
-        background-color: #090909;
-        color: #ffffff;
-      }
-    }
-
-  }
  
 
   .text-input {

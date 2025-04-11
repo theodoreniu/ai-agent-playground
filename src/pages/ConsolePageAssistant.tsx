@@ -494,7 +494,7 @@ export function ConsolePageAssistant() {
       setConnectMessage('');
 
       const profile = new Profiles().currentProfile;
-      const sse = new EventSource(profile.getAgentSseUrl('sessionId'));
+      const sse = new EventSource(profile.getAgentSseUrl());
       sse.onmessage = (event) => {
         console.log(event.data);
       };

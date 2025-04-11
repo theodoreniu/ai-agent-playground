@@ -99,7 +99,7 @@ class Profile {
     return `${endpoint}/ws/realtime?api_key=${this.agentApiKey}`;
   }
 
-  getAgentSseUrl(sessionId: string): string {
+  getAgentSseUrl(): string {
     const endpoint = this.agentApiUrl;
 
     if (!this.agentApiKey) {
@@ -107,7 +107,7 @@ class Profile {
       return '';
     }
 
-    return `${endpoint}/sse/${sessionId}?api_key=${this.agentApiKey}`;
+    return `${endpoint}/sse?api_key=${this.agentApiKey}`;
   }
 
   getAgentSpeechUrl(): string {

@@ -17,10 +17,6 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url('./static/bg_light.jpg');
   color: #000000;
   overflow-y: auto;
 
@@ -70,10 +66,6 @@ body {
 }
 
 body.night-mode {
-  background-image: url('./static/bg_dark.jpg');
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: 20% 20%;
   color: #dddddd;
 
   input {

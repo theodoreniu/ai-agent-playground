@@ -1381,7 +1381,6 @@ const SettingsComponent: React.FC<{
       JSON.stringify(newProfiles.currentProfile) !==
       JSON.stringify(oldProfiles.currentProfile)
     ) {
-      alert('Current profile changed, page will reload.');
       window.location.reload();
     }
   };

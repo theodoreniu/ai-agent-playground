@@ -171,7 +171,7 @@ const TrafficMonitor: React.FC = () => {
     };
 
     return (
-      <div style={styles.tables}>
+      <div style={styles.tables} className="traffic_monitor">
         <TableRender style={styles.table} table={table1} />
         <TableRender style={styles.table} table={table2} />
         <TableRender style={styles.table} table={table3} />

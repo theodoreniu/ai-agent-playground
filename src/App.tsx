@@ -1,4 +1,5 @@
 import { ConsolePage } from './pages/ConsolePage';
+
 import './App.scss';
 import { AppProvider } from './providers/AppProvider';
 import LocalStorageViewer from './pages/LocalStorageViewer';
@@ -17,31 +18,45 @@ function App() {
   const [loadFunctionsTools] =
     useState<[ToolDefinitionType, Function][]>(loadFunctions());
 
-  useEffect(() => {
-    if (background) {
-      const path = isNightMode ? 'dark' : 'light';
-      const url = `/images/bg/${path}/${background}.png`;
-      document.body.style.backgroundImage = `url(${url})`;
-    }
-  }, [background, isNightMode]);
+  // useEffect(() => {
+  //   if (background) {
+  //     const path = isNightMode ? 'dark' : 'light';
+  //     const url = `/images/bg/${path}/${background}.png`;
+  //     document.body.style.backgroundImage = `url(${url})`;
+  //   }
+  // }, [background, isNightMode]);
 
   useEffect(() => {
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-      .matches
-      ? 'dark'
-      : 'light';
+    // const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+    //   .matches
+    //   ? 'dark'
+    //   : 'light';
 
-    if (systemTheme === 'dark') {
-      setIsNightMode(true);
-    } else {
-      setIsNightMode(false);
-    }
+    // if (systemTheme === 'dark') {
+    //   setIsNightMode(true);
+    // } else {
+    //   setIsNightMode(false);
+    // }
+
+    setIsNightMode(true);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const gradientStyle = {
+    width: '100vw',
+    height: '100vh',
+    opacity: opacity,
+  };
+
   return (
-    <div data-component="App" key={appKey} style={{ opacity: opacity }}>
+    <div
+      data-component="App"
+      key={appKey}
+      className="app-container"
+      style={gradientStyle}
+    >
+      <div className="particles"></div>
       <GptImagesProvider>
         <TrafficDataProvider>
           <AppProvider

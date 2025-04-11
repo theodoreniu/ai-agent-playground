@@ -24,6 +24,8 @@ export function NightMode() {
     setIsNightMode(currentValue);
   };
 
+  return null;
+
   return (
     <span onClick={toggleNightMode}>
       {isNightModeRef.current ? <Moon /> : <Sun />}

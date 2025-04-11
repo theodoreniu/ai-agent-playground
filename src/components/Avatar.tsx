@@ -99,7 +99,7 @@ const Avatar: React.FC = () => {
       console.log('avatarConfig: ' + JSON.stringify(avatarConfig));
       avatarConfig.customized = false;
       avatarConfig.backgroundImage = new URL(
-        'https://playground.azuretsp.com/images/avatar_bg.jpg',
+        'https://playground.azuretsp.com/images/bg_dark.jpg',
       );
 
       let responseData = null;
