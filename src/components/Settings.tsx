@@ -444,7 +444,7 @@ const SettingsComponent: React.FC<{
             />
           </div>
           <div style={styles.settings_inline_block}>
-            <div style={styles.settingLabel}>Scene</div>
+            <div style={styles.settingLabel}>Scenario</div>
             <Dropdown
               options={supportedScenes}
               selectedValue={profiles.currentProfile?.scene || SCENE_DEFAULT}
