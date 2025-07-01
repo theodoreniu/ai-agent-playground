@@ -315,7 +315,7 @@ export function ConsolePageRealtime() {
     }
 
     setConnectStatus(CONNECT_CONNECTING);
-    setConnectMessage('Connecting...');
+    setConnectMessage(`Connecting with ${profile.getAgentRealtimeUrl()}...`);
 
     // Connect to realtime API
     try {
