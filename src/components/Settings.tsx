@@ -117,8 +117,8 @@ const deepSeekFunctionCallingTypes = [
 ];
 
 const speechMethodOptions = [
-  { value: SPEECH_METHOD_STREAM, label: 'Stream' },
   { value: SPEECH_METHOD_COMPLETION, label: 'Completion' },
+  { value: SPEECH_METHOD_STREAM, label: 'Stream' },
 ];
 
 const useAgentProxyOptions = [
