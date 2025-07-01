@@ -26,6 +26,8 @@ const SpeechTTS: React.FC = () => {
 
   const speechKey = profile?.cogSvcSubKey || '';
   const serviceRegion = profile?.cogSvcRegion || '';
+  const detectLanguage = profile?.detectLanguage || SPEECH_LANGUAGE_DEFAULT;
+  const speechVoice = profile?.speechVoice || SPEECH_VOICE_WOMAN;
 
   const getSynthesizer = useCallback(() => {
     if (speechKey && serviceRegion) {
@@ -34,9 +36,8 @@ const SpeechTTS: React.FC = () => {
         serviceRegion,
       );
 
-      const detectLanguage = profile?.detectLanguage || SPEECH_LANGUAGE_DEFAULT;
       const speechSynthesisVoiceName =
-        profile?.speechVoice === SPEECH_VOICE_WOMAN
+        speechVoice === SPEECH_VOICE_WOMAN
           ? speechLanguageMapWoman[detectLanguage]
           : speechLanguageMapMan[detectLanguage];
 
