@@ -46,7 +46,7 @@ const SpeechTTS: React.FC = () => {
       return new sdk.SpeechSynthesizer(speechConfig);
     }
     return null;
-  }, [speechKey, serviceRegion]);
+  }, [speechKey, serviceRegion, speechVoice, detectLanguage]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const speak = async (text: string) => {
