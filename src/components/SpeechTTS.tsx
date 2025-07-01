@@ -27,27 +27,34 @@ const SpeechTTS: React.FC = () => {
   const speechKey = profile?.cogSvcSubKey || '';
   const serviceRegion = profile?.cogSvcRegion || '';
 
-  const speechConfig = sdk.SpeechConfig.fromSubscription(
-    speechKey,
-    serviceRegion,
-  );
+  const getSynthesizer = useCallback(() => {
+    if (speechKey && serviceRegion) {
+      const speechConfig = sdk.SpeechConfig.fromSubscription(
+        speechKey,
+        serviceRegion,
+      );
 
-  const detectLanguage = profile?.detectLanguage || SPEECH_LANGUAGE_DEFAULT;
-  const speechSynthesisVoiceName =
-    profile?.speechVoice === SPEECH_VOICE_WOMAN
-      ? speechLanguageMapWoman[detectLanguage]
-      : speechLanguageMapMan[detectLanguage];
+      const detectLanguage = profile?.detectLanguage || SPEECH_LANGUAGE_DEFAULT;
+      const speechSynthesisVoiceName =
+        profile?.speechVoice === SPEECH_VOICE_WOMAN
+          ? speechLanguageMapWoman[detectLanguage]
+          : speechLanguageMapMan[detectLanguage];
 
-  speechConfig.speechSynthesisVoiceName = speechSynthesisVoiceName;
+      speechConfig.speechSynthesisVoiceName = speechSynthesisVoiceName;
 
-  const synthesizer = new sdk.SpeechSynthesizer(speechConfig);
+      return new sdk.SpeechSynthesizer(speechConfig);
+    }
+    return null;
+  }, [speechKey, serviceRegion]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const speak = async (text: string) => {
     try {
       if (!text.trim()) return;
 
-      if (!speechKey || !serviceRegion) {
+      const synthesizer = getSynthesizer();
+
+      if (!synthesizer) {
         return;
       }
 

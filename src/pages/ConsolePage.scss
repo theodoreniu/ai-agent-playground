@@ -132,7 +132,7 @@
     }
 
     .content-right {
-      width: 330px;
+      width: 300px;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
@@ -277,8 +277,8 @@
       }
 
       & > div.camera {
-        height: 230px;
-        max-height: 230px;
+        height: 200px;
+        max-height: 200px;
         white-space: pre;
         background-image: url('../static/camera-light.svg');
         background-repeat: no-repeat;
@@ -650,7 +650,7 @@
   background-size: 64px;
 
   width: 100%;
-  height: 226px;
+  height: 200px;
 
   video {
     width: 100%;
