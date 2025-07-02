@@ -47,7 +47,7 @@ const DEFAULT = 'Default';
 const REAL_TIME_API = 'Realtime';
 const GPT_IMAGE = 'Image';
 const GRAPHRAG = 'RAG';
-const SPEECH = 'Speech';
+const SPEECH = 'Azure Speech';
 const TTS = 'TTS';
 const COMPLETION = 'Completion';
 const DEEPSEEK = 'DeepSeek';
@@ -1595,7 +1595,7 @@ const SettingsComponent: React.FC<{
                 >
                   {SPEECH}
                 </button>
-                <button
+                {/* <button
                   style={{
                     ...styles.settingsTabButton,
                     ...(activeTab === TTS ? styles.tabActive : {}),
@@ -1603,7 +1603,7 @@ const SettingsComponent: React.FC<{
                   onClick={() => setActiveTab(TTS)}
                 >
                   {TTS}
-                </button>
+                </button> */}
                 <button
                   style={{
                     ...styles.settingsTabButton,
@@ -1613,7 +1613,7 @@ const SettingsComponent: React.FC<{
                 >
                   {COMPLETION}
                 </button>
-                <button
+                {/* <button
                   style={{
                     ...styles.settingsTabButton,
                     ...(activeTab === DEEPSEEK ? styles.tabActive : {}),
@@ -1621,7 +1621,7 @@ const SettingsComponent: React.FC<{
                   onClick={() => setActiveTab(DEEPSEEK)}
                 >
                   {DEEPSEEK}
-                </button>
+                </button> */}
                 <button
                   style={{
                     ...styles.settingsTabButton,
